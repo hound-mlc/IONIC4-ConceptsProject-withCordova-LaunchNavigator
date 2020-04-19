@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Tu lista de lecturas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="back">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+          <ion-list>
+            <ion-item *ngFor="let item of apiuser.listaLibros" [routerLink]="['/detalles', item.idLibro]">
+                <ion-avatar slot="start">
+                  <img src="{{item.imagen}}">
+                </ion-avatar>
+                <ion-label>{{item.titulo}}</ion-label>
+                <ion-note slot="end" class="chFont">{{item.nota}}</ion-note>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

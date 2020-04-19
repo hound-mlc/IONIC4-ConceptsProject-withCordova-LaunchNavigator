@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start"> 
+      <ion-back-button defaultHref="/tulista">
+      </ion-back-button> </ion-buttons>
+    <ion-title>Detalles</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="borrar()">
+        <ion-icon  name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <h1>{{libroCargado.titulo}} - {{libroCargado.autor}}</h1>
+        <h5>{{libroCargado.genero}}</h5>
+        <img src="{{libroCargado.imagen}}" width="250px" height="360px"/>
+        <p>{{libroCargado.argumento}}</p>
+        <ion-button color="tertiary" expand="full">Borrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+</ion-content>

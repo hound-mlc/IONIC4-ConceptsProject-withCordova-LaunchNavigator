@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Nuestras librerias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+          <ion-card *ngFor="let item of apiuser.librerias" (click)="navigate(item.coordenadas)">
+            <img src="{{item.imagen}}" />
+            <ion-card-header>
+              <ion-card-subtitle>{{item.direccion}}</ion-card-subtitle>
+              <ion-card-title>{{item.nombreLibreria}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
