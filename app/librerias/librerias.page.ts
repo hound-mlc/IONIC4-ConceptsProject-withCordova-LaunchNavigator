@@ -14,7 +14,7 @@ export class LibreriasPage implements OnInit {
   ngOnInit() {
   }
 
-  source: any = [22.303894, 70.802160] // source lat,long
+  //source: any = [22.303894, 70.802160] // source lat,long
   
 
 
